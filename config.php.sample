@@ -19,7 +19,7 @@ $maxReward = '0.3';
 // Database connection
 // Replace by your database credentials
 $userDB = 'root';
-$database = 'faucet';
+$database = 'payouts';
 $passwordDB = '0';
 $hostDB = '127.0.0.1';
 
