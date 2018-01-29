@@ -6,21 +6,21 @@ $logo = 'images/nbrcoin.png';
 
 // Faucet address for donations
 // Replace by your wallet address
-$faucetAddress = 'wallet_address';
+$faucetAddress = 'NAHwNpB9ETS1YHapFu4qDEbVTCuV2ztbzX8oZe5bB7ZTL6BYTvugV8WD2rC1pykcosE2vuwxpgfG51AUoWmS22qTFPMc71a';
 
 // Reward time in hours
-$rewardEvery = '12';
+$rewardEvery = '6';
 // Max reward and min reward as decimals Ex: Min = 10.0 & Max = 20.0
-$minReward = '0.01'; //Remember that the minimum for an eobot deposit is 5 BCN as reward.
+$minReward = '0.001'; //Remember that the minimum for an eobot deposit is 5 BCN as reward.
 $maxReward = '0.3';
 // Transaction fee is set to 0.01 BCN for every request.
 
 
 // Database connection
 // Replace by your database credentials
-$userDB = 'db_user';
-$database = 'db_name';
-$passwordDB = 'db_password';
+$userDB = 'root';
+$database = 'faucet';
+$passwordDB = '0';
 $hostDB = '127.0.0.1';
 
 // Recaptcha Keys. You can get yours here: https://www.google.com/recaptcha/
