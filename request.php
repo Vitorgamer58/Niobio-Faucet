@@ -51,7 +51,7 @@ if ($recaptcha->set()) {
             exit();
         }
 
-        $bitcoin = new jsonRPCClient('http://127.0.0.1:8070/json_rpc');
+        $bitcoin = new jsonRPCClient('http://127.0.0.1:8317/json_rpc');
         $balance = $bitcoin->getbalance();
         $balanceDisponible = $balance['available_balance'];
         $transactionFee = 10000;
