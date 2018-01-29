@@ -25,22 +25,16 @@ require_once 'config.php';
         }
     </script>
 
-    <!--<script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112509983-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        ga('create', 'UA-78493281-2', 'auto');
-        ga('send', 'pageview');
-    </script>-->
+  gtag('config', 'UA-112509983-2');
+</script>
+
 </head>
 
 <body>
@@ -67,7 +61,7 @@ require_once 'config.php';
 
             <?php
 
-            $bitcoin = new jsonRPCClient('http://127.0.0.1:8070/json_rpc');
+            $bitcoin = new jsonRPCClient('http://127.0.0.1:8317/json_rpc');
 
             $balance = $bitcoin->getbalance();
             $balanceDisponible = $balance['available_balance'];
