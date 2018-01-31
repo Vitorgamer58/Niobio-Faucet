@@ -1,8 +1,30 @@
-#Bytecoin Faucet Installation
+#Niobio Cash Faucet Installation
 
-This faucet runs on a linux environment with PHP and MYSQL, and it was tested on Ubuntu 15.04 with PHP 5.6.4 and MariaDB 5.5.
+instale todos os componentes necessários, a copmeçar pelo MariaDB seguindo este tutorial: https://www.liquidweb.com/kb/how-to-install-mariadb-5-5-on-ubuntu-14-04-lts/ e lembre-se bem da senha que você colocar no usuario root pois ela será solicitada na instalação do phpmyadmin
 
-Faucet is set to work on the same server as bytecoin wallet and bytecoin daemon.
+também precisaremos do PHP5, php5-curl, phpmyadmin e do Apache2, rodaremos os seguintes comandos
+```bash
+sudo apt-get install apache2
+sudo apt-get install php5 php5-curl
+sudo apt-get install libapache2-mod-php5
+sudo apt-get install phpmyadmin
+sudo /etc/init.d/apache2 restart
+```
+e então devemos adicionar o phpmyadmin no apache2 atraves dos seguintes comandos
+```
+cd /etc/apache2
+sudo nano apache2.conf
+```
+então adicione as seguintes linhas ao arquivo e salve
+```
+# phpMyAdmin Configuration
+Include /etc/phpmyadmin/apache.conf
+```
+agora entre no phpmyadmin usando 
+```
+127.0.0.1/phpmyadmin
+```
+e faça login com o usuario root e a senha que você colocou na instalação do mariadb
 
 First of all you need to create a new database and create this table on it for the faucet to save all requests:
 ```
@@ -22,7 +44,7 @@ After you create database, copy config.php.sample to config.php and edit config.
 Now for faucet to communicate with bytecoin wallet you need to run simplewallet as this:
 
 ```bash
-./simplewallet --wallet-file=wallet.bin --pass=password --rpc-bind-port=8070 --rpc-bind-ip=127.0.0.1
+./simplewallet --wallet-file=wallet.bin --pass=password --rpc-bind-port=8317 --rpc-bind-ip=127.0.0.1
 ```
 
 Note: Run this command after you already created a wallet with simplewallet commands.
