@@ -12,6 +12,8 @@ require_once 'config.php';
 
     <meta charset='UTF-8'>
     <title><?php echo $faucetTitle; ?></title>
+    <meta name="keywords" content="NBR, Niobio Cash, Faucet, Earn, Free">
+    <meta name="description" content="Earn NBR for Free">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='shortcut icon' href='images/favicon.ico'>
     <link rel='icon' type='image/icon' href='images/favicon.ico'>
