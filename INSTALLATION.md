@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `payouts` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 ```
 ![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_218.png)
-Então clique em Executar
+Então clique em Executar, obvio que não aprendi isso sozinho, agradecimento ao Filipe, um dos Desenvolvedores da Niobio Cash
 
 Após a criação da Database, renomeie o arquivo config.php.sample para config.php e edite config.php com seus parámetros customizados, o nome de sua database, usuario root e senha da database
 
