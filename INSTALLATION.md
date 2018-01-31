@@ -84,9 +84,13 @@ Aanuncios podem ser editados na parte index.php entre essas linhas para uma melh
 
 
 depois destes passos você estará pronto para ir, aqui alguns sites para uma boa monetização do seu Faucet garantindo lucratividade:
+
 Anonymous ADS: https://a-ads.com/?partner=828285
+
 PopADS: https://www.popads.net/users/refer/1548447
+
 Propeller ADS: https://publishers.propellerads.com/#/pub/auth/signUp?refId=TL9t
+
 e um pequeno Script para minerar XMR no site do visitante: http://www.limontec.com/2017/09/como-minerar-xmr-atraves-de-visitas-em.html
 
 Se este tutorial te ajudou, doe para o meu Faucet: NAHwNpB9ETS1YHapFu4qDEbVTCuV2ztbzX8oZe5bB7ZTL6BYTvugV8WD2rC1pykcosE2vuwxpgfG51AUoWmS22qTFPMc71a 
