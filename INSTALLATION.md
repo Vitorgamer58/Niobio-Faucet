@@ -1,6 +1,6 @@
 #Niobio Cash Faucet Installation
 
-instale todos os componentes necessários, a copmeçar pelo MariaDB seguindo este tutorial: https://www.liquidweb.com/kb/how-to-install-mariadb-5-5-on-ubuntu-14-04-lts/ e lembre-se bem da senha que você colocar no usuario root pois ela será solicitada na instalação do phpmyadmin
+Instale todos os componentes necessários, a copmeçar pelo MariaDB seguindo este tutorial: https://www.liquidweb.com/kb/how-to-install-mariadb-5-5-on-ubuntu-14-04-lts/ e lembre-se bem da senha que você colocar no usuario root pois ela será solicitada na instalação do phpmyadmin
 
 também precisaremos do PHP5, php5-curl, phpmyadmin e do Apache2, rodaremos os seguintes comandos
 ```bash
@@ -26,7 +26,15 @@ agora entre no phpmyadmin usando
 ```
 e faça login com o usuario root e a senha que você colocou na instalação do mariadb
 
-First of all you need to create a new database and create this table on it for the faucet to save all requests:
+e então crie uma nova base de dados, você precisara colocar o nome dessa base de dados na configuração mais tarde.
+![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_214.png)
+![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_215.png)
+
+Agora você deve entrar na base de dados, abrir uma linha para comandos
+![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_216.png)
+![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_217.png)
+
+e Digitar o seguinte comando
 ```
 CREATE TABLE IF NOT EXISTS `payouts` (
 `id` bigint(20) unsigned NOT NULL,
@@ -37,35 +45,46 @@ CREATE TABLE IF NOT EXISTS `payouts` (
   `timestamp` datetime NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 ```
+![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_218.png)
+Então clique em Executar
 
-After you create database, copy config.php.sample to config.php and edit config.php with all your custom parameters and also database information.
+Após a criação da Database, renomeie o arquivo config.php.sample para config.php e edite config.php com seus parámetros customizados, o nome de sua database, usuario root e senha da database
 
-
-Now for faucet to communicate with bytecoin wallet you need to run simplewallet as this:
-
-```bash
-./simplewallet --wallet-file=wallet.bin --pass=password --rpc-bind-port=8317 --rpc-bind-ip=127.0.0.1
-```
-
-Note: Run this command after you already created a wallet with simplewallet commands.
-
-* wallet.bin needs to be the wallet file name that you enter when you created your wallet.
-* password needs to be the password to open your wallet
-* rpc-bind-port and rpc-bind-ip can be changed if so, you need to edit index.php and request.php (Please don't edit, as you may end opening the wallet rpc to the public)
-
-
-And bytecoin daemon as this:
+eu recomendo o seguinte comando para a simplewallet, usando um daemon remoto, o que pouparaá recursos da sua maquina ou VPS
 
 ```bash
-./bytecoind --rpc-bind-ip=127.0.0.1
+./simplewallet --wallet-file=wallet.bin --pass=senha --rpc-bind-port=8317 --rpc-bind-ip=127.0.0.1 --daemon-ip 45.155.141.227 --daemon-port 8313
 ```
 
-To keep bytecoind and simplewallet on background you can use screen command.
+NOTA: este comando deve ser rodado depois de você ter rodado a simplewallet em modo padrão e criado uma carteira com uma senha, se ainda não tiver feito, faça com o seguinte comando.
 
-Advertisements can be edited on the index.php they are between this lines for an easy location:
+```bash
+./simplewallet --daemon-ip 45.155.141.227 --daemon-port 8313
+```
+
+* wallet.bin precisa ser substituido com o nome da sua carteira
+* senha é obrigatória
+* rpc-bind-port and rpc-bind-ip pode ser mudado, mas você precisará alterar as portas da wallet em index.php e requests.php
+
+se estiver usando uma VPS, você vai precisar que o comando rode 24/7 enquanto você está fora, então primeiro deverá rodar o comando
+
+```bash
+Screen -S wallet
+```
+e rodar os comandos a partir desta janela, para visualizar a wallet depois de ter saido, basta dar o comando
+```bash
+Screen -x wallet
+```
+você ainda precisará editar as linhas 29 e 30 do config.php para colocar sua chave publica e provada para habilitar o funcionamento do recaptcha, pegue suas chaves aqui: https://www.google.com/recaptcha/intro/android.html clique em Get reCAPTCHA
+
+Aanuncios podem ser editados na parte index.php entre essas linhas para uma melhor organização:
 
            <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
            <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
 
 
-After all this steps you should be ready to go ;)
+depois destes passos você estará pronto para ir, aqui alguns sites para uma boa monetização do seu Faucet garantindo lucratividade:
+Anonymous ADS: https://a-ads.com/?partner=828285
+PopADS: https://www.popads.net/users/refer/1548447
+Propeller ADS: https://publishers.propellerads.com/#/pub/auth/signUp?refId=TL9t
+e um pequeno Script para minerar XMR no site do visitante: http://www.limontec.com/2017/09/como-minerar-xmr-atraves-de-visitas-em.html
