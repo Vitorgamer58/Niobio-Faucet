@@ -62,7 +62,7 @@ input[type="submit"] {
 }
 
 .container {
-    width: 700px ;
+    width: 1000px ;
   margin-left: auto ;
   margin-right: auto ;
 
@@ -70,7 +70,7 @@ input[type="submit"] {
 
 /* ---------- LOGIN-FORM ---------- */
 #login-form {
-  width: 600px;
+  width: 900px;
 }
 
 #login-form h3 {
