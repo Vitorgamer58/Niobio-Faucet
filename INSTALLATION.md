@@ -27,14 +27,9 @@ agora entre no phpmyadmin usando
 e faça login com o usuario root e a senha que você colocou na instalação do mariadb
 
 e então crie uma nova base de dados, você precisara colocar o nome dessa base de dados na configuração mais tarde.
-![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_214.png)
-![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_215.png)
+![alt text](http://ap.imagensbrasil.org/images/2018/03/09/Screenshot_518.png)
 
-Agora você deve entrar na base de dados, abrir uma linha para comandos
-![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_216.png)
-![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_217.png)
-
-e Digitar o seguinte comando
+Agora você deve entrar na base de dados, abrir uma linha para comandos e Digitar o seguinte comando
 ```
 CREATE TABLE IF NOT EXISTS `payouts` (
 `id` bigint(20) unsigned NOT NULL,
@@ -45,15 +40,15 @@ CREATE TABLE IF NOT EXISTS `payouts` (
   `timestamp` datetime NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 ```
-![alt text](http://ap.imagensbrasil.org/images/2018/01/31/Screenshot_218.png)
-Então clique em Executar, obvio que não aprendi isso sozinho, agradecimento ao Filipe, um dos Desenvolvedores da Niobio Cash
+![alt text](http://ap.imagensbrasil.org/images/2018/03/09/Screenshot_519.png)
+Então clique em Executar, obvio que não aprendi isso sozinho, agradecimento ao Filipe, um dos Desenvolvedores da Niobio Cash e dodo da pool 4miner
 
 Após a criação da Database, renomeie o arquivo config.php.sample para config.php e edite config.php com seus parámetros customizados, o nome de sua database, usuario root e senha da database
 
 eu recomendo o seguinte comando para a simplewallet, usando um daemon remoto, o que pouparaá recursos da sua maquina ou VPS
 
 ```bash
-./simplewallet --wallet-file=wallet.bin --pass=senha --rpc-bind-port=8317 --rpc-bind-ip=127.0.0.1 --daemon-ip 45.155.141.227 --daemon-port 8313
+./simplewallet --wallet-file wallet.bin --pass senha --rpc-bind-port=8317 --rpc-bind-ip=127.0.0.1 --daemon-host 45.155.141.227 --daemon-port 8313
 ```
 
 NOTA: este comando deve ser rodado depois de você ter rodado a simplewallet em modo padrão e criado uma carteira com uma senha, se ainda não tiver feito, faça com o seguinte comando.
@@ -89,10 +84,10 @@ Anonymous ADS: https://a-ads.com/?partner=828285
 
 PopADS: https://www.popads.net/users/refer/1548447
 
-Propeller ADS: https://publishers.propellerads.com/#/pub/auth/signUp?refId=TL9t
+Propeller ADS (não recomendado): https://publishers.propellerads.com/#/pub/auth/signUp?refId=TL9t
 
 e um pequeno Script para minerar XMR no site do visitante: http://www.limontec.com/2017/09/como-minerar-xmr-atraves-de-visitas-em.html
 
 Se este tutorial te ajudou, doe para o meu Faucet: NAHwNpB9ETS1YHapFu4qDEbVTCuV2ztbzX8oZe5bB7ZTL6BYTvugV8WD2rC1pykcosE2vuwxpgfG51AUoWmS22qTFPMc71a 
 
-estou rodando um Faucet na minha VPS do google em 1CPU compartilhada e 0.6GB de memória: http://nbr-faucet.ddns.net
+estou rodando um Faucet na minha VPS do google em 1CPU compartilhada e 0.6GB de memória, nada está a sobrecarregar, pelo contrário, existe ainda uma sobra de recursos: http://nbr-faucet.ddns.net
