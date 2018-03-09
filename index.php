@@ -153,7 +153,7 @@ require_once 'config.php';
 
                 <?php } ?>
                 <div class='alert alert-info radius'>
-                    Saldo: <?php echo $balanceDisponibleFaucet ?> NBR.<br>
+                    Saldo: <?php echo $balanceDisponibleFaucet ?> BBRC.<br>
                     <?php
 
                     $link = new PDO('mysql:host=' . $hostDB . ';dbname=' . $database, $userDB, $passwordDB);
@@ -186,7 +186,7 @@ require_once 'config.php';
                     die('Помилка піключення' . mysql_error());
                 } else { ?>
 
-                    <input type='text' name='wallet' required placeholder='Endereço da carteira NBR'>
+                    <input type='text' name='wallet' required placeholder='Endereço da carteira BBRC'>
 
                     <input type='text' name='paymentid' placeholder='ID do pagamento (Opcional)'>
                     <br/>
