@@ -1,15 +1,15 @@
 <?php
 
-$faucetTitle = 'Nióbio Cash Faucet';
-$faucetSubtitle = 'A cada 12 horas você pode obter Nióbio Cash grátis';
-$logo = 'images/nbrcoin.png';
+$faucetTitle = 'Blood Donation Faucet';
+$faucetSubtitle = 'A cada 2 horas você pode obter BBRC grátis';
+$logo = 'images/blood.png';
 
 // Faucet address for donations
 // Replace by your wallet address
-$faucetAddress = 'NAHwNpB9ETS1YHapFu4qDEbVTCuV2ztbzX8oZe5bB7ZTL6BYTvugV8WD2rC1pykcosE2vuwxpgfG51AUoWmS22qTFPMc71a';
+$faucetAddress = '';
 
 // Reward time in hours
-$rewardEvery = '6';
+$rewardEvery = '2';
 // Max reward and min reward as decimals Ex: Min = 10.0 & Max = 20.0
 $minReward = '0.001'; //Remember that the minimum for an eobot deposit is 5 BCN as reward.
 $maxReward = '0.3';

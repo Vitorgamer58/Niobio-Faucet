@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 ini_set('max_execution_time', 20);
 require_once 'classes/jsonRPCClient.php';
@@ -12,11 +12,11 @@ require_once 'config.php';
 
     <meta charset='UTF-8'>
     <title><?php echo $faucetTitle; ?></title>
-    <meta name="keywords" content="NBR, Niobio Cash, Faucet, Earn, Free">
-    <meta name="description" content="Earn NBR for Free">
+    <meta name="keywords" content="bbrc, Blood donation, Faucet, Earn, Free">
+    <meta name="description" content="Earn BBRC for Free">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='shortcut icon' href='images/favicon.ico'>
-    <link rel='icon' type='image/icon' href='images/favicon.ico'>
+    <link rel='shortcut icon' href='images/blood.png'>
+    <link rel='icon' type='image/icon' href='images/blood.png'>
 
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel='stylesheet' href='/css/style.css'>
@@ -120,13 +120,13 @@ require_once 'config.php';
                     <?php } else if ($mensaje == 'wallet') { ?>
 
                         <div id='alert' class='alert alert-error radius'>
-                            Digite o endereço NBR correto.
+                            Digite o endereço BBRC correto.
                         </div>
                     <?php } else if ($mensaje == 'success') { ?>
 
                         <div class='alert alert-success radius'>
-                            Você ganhou <?php echo $_GET['amount']; ?> NBRs.<br/><br/>
-                            Receberá <?php echo $_GET['amount'] - 0.0001; ?> NBRs. (fee de 0.0001)<br/>
+                            Você ganhou <?php echo $_GET['amount']; ?> BBRCs.<br/><br/>
+                            Receberá <?php echo $_GET['amount'] - 0.0001; ?> BBRCs. (fee de 0.0001)<br/>
                             <a target='_blank'
                                href='http://explorer.niobiocash.com/?hash=<?php echo $_GET['txid']; ?>#blockchain_transaction'>Confira na Blockchain.</a>
                         </div>
@@ -138,7 +138,7 @@ require_once 'config.php';
                     <?php } else if ($mensaje == 'notYet') { ?>
 
                         <div id='alert' class='alert alert-warning radius'>
-                            Os nióbios são emitidos uma vez a cada 12 horas. Venha mais tarde.
+                            Os BBRCsão emitidos uma vez a cada 2 horas. Venha mais tarde.
                         </div>
                     <?php } else if ($mensaje == 'dry') { ?>
 
@@ -200,7 +200,7 @@ require_once 'config.php';
                     echo $recaptcha->render();
                     ?>
 
-                    <center><input type='submit' value='Obter nióbios grátis!'></center>
+                    <center><input type='submit' value='Obter BBRC grátis!'></center>
                     <br>
                     <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
 <iframe data-aa='827963' src='//acceptable.a-ads.com/827963' scrolling='no' style='border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
@@ -261,12 +261,15 @@ require_once 'config.php';
                         </tbody>
                     </table>
                 </div>
-                <p style='font-size:12px;'>Doe nióbios para apoiar este faucet.
-                    <br>Carteira do Faucet NBR: <span style='font-size:10px;'><?php echo $faucetAddress; ?></span>
-                    <br>&#169; 2018 Faucet by vinyvicente</p></center>
+                <p style='font-size:12px;'>Doe BBRC para apoiar este faucet.
+                    <br>
+                    Carteira do Faucet BBRC: <span style='font-size:10px;'><?php echo $faucetAddress; ?></span>
+                    <br>
+              &#169; 2018 Faucet by vinyvicente, Forked from Niobio Cash Faucet</p></center>
                 <footer class='clearfix'>
-                    <a href="https://niobiocash.com">NIOBIOCASH.COM</a>
+                    <a href="http://blooddonationcoin.org/">blooddonationcoin.org</a>
                 </footer>
+				<a href="https://www.popads.net/users/refer/1548447"><img src="http://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
             </form>
 
         </fieldset>
