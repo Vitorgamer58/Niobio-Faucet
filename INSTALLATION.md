@@ -1,4 +1,4 @@
-#Niobio Cash Faucet Installation
+#Cryptonight Faucet Installation
 
 Instale todos os componentes necessários, a começar pelo MariaDB seguindo este tutorial: https://www.liquidweb.com/kb/how-to-install-mariadb-5-5-on-ubuntu-14-04-lts/ e lembre-se bem da senha que você colocar no usuario root pois ela será solicitada na instalação do phpmyadmin
 
