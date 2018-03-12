@@ -1,6 +1,6 @@
 # Niobio-Faucet
 
-Um FAUCET PHP e MYSQL para Niobio Cash criptomoeda forkado do niobio-faucet oficial que foi forkado do KarbowanecFaucet, um faucet por vinyvicente.
+Um FAUCET PHP e MYSQL para criptomoedas cryptonight, forkado do niobio-faucet oficial que foi forkado do KarbowanecFaucet, um faucet por vinyvicente.
 
 Eu aprimorei o faucet oficial e criei um tutorial para permitir a criação de mais faucets por aqueles que não detém tanto conhecimento
 
